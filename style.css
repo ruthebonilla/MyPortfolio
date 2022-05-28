@@ -402,3 +402,13 @@ ul{
 .general-info li a{
     color: var(--main-color);
 }
+
+
+/* contact section */
+.contact-form{
+    background-color: red;
+}
+
+.contact-info{
+    background-color: green;
+}
