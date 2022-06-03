@@ -146,6 +146,10 @@ ul{
     padding-left: 15px;
 }
 
+li{
+    list-style-type: none;
+}
+
 /* header section--------------------------- */
 .header{
     position: absolute;
@@ -204,12 +208,16 @@ ul{
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: blue;
+    background-color: pink;
+    padding: 35px 15px;
 }
 
 .header .nav-inner{
-    min-height: 50vh;
-    background-color: red;
+    min-height: calc(100vh - 70px);
+    background-color: violet;
+    padding: 400px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 
