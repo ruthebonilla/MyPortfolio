@@ -32,7 +32,7 @@ body{
     line-height: 1.5;
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
-    padding: 5vh 15px;
+    padding: 35px 15px;
     font-family: 'Truculenta', sans-serif;
 }
 body.hide-scrolling{
@@ -60,9 +60,16 @@ body::before{
 section{
     background-color: var(--white-alpha-25);
     border: 3px solid var(--white-alpha-40);
-    min-height: 90vh;
+    min-height: calc(100vh - 70px);
     border-radius: 30px;
     backdrop-filter: var(--backdrop-filter-blur);
+    display: none;
+}
+section.active{
+    display: block;
+}
+section.fade-out{
+    animation: fadeOut 0.5s ease-in-out forwards;
 }
 
 .main{
@@ -150,6 +157,16 @@ li{
     list-style-type: none;
 }
 
+/* Animation Keyframe--------------------------- */
+@keyFrames fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 /* header section--------------------------- */
 .header{
     position: absolute;
@@ -171,6 +188,7 @@ li{
     align-items: center;
     justify-content: center;
     margin: 0 15px;
+    z-index: 1;
 }
 
 .header .nav-toggler span{
@@ -210,6 +228,7 @@ li{
     height: 100%;
     width: 100%;
     padding: 35px 15px;
+    overflow: auto;
     visibility: hidden;
 }
 
@@ -222,8 +241,41 @@ li{
     backdrop-filter: var(--backdrop-filter-blur);
     padding: 50px 0;
     border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.header .nav-inner ul li{
+    text-align: center;
+}
+
+.header .nav-inner ul li a{
+    font-size: 35px;
+    color: var(--blue-dark);
+    display: block;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+.header .nav-inner ul li a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50%;
+    width: 0%;
+    background-color: var(--white-alpha-25);
+    z-index: -1;
+    transition: width 0.5s ease;
+}
+.header .nav-inner ul li a:hover::before{
+    width: 100%;
+}
+.header .nav-inner ul li a:hover{
+    color: var(--main-color);
+}
 
 /* .header .nav{
     position: fixed;
@@ -245,8 +297,11 @@ li{
 
 /* home section--------------------------- */
 .home-section{
-    display: flex;
+    /* display: flex; */
     padding: 120px 0;
+}
+.home-section.active{
+    display: flex;
 }
 
 .home-text p{

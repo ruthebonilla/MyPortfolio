@@ -1,3 +1,14 @@
+// TOGGLE NAVBAR
+const navToggler = document.querySelector(".nav-toggler");
+navToggler.addEventListener("click", () =>{
+    // console.log("hi");
+    hideSection();
+});
+
+function hideSection(){
+    document.querySelector("section.active").classList.toggle("fade-out");
+}
+
 // ABOUT TABS
 const tabsContainer = document.querySelector(".about-tabs"),
 aboutSection = document.querySelector(".about-section");
@@ -29,6 +40,7 @@ function togglePortfolioPopup(){
 }
 document.querySelector(".pp-close").addEventListener("click", togglePortfolioPopup);
 
+
 //HIDE POPUP WHEN CLICKING OUTSIDE OF IT
 document.addEventListener("click", (e) =>{
     // console.log(e.target);
@@ -48,3 +60,5 @@ function portfolioItemDetails(portfolioItem){
     document.querySelector(".pp-body").innerHTML =
     portfolioItem.querySelector(".portfolio-item-details").innerHTML;
 }
+
+
