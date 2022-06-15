@@ -3,11 +3,38 @@ const navToggler = document.querySelector(".nav-toggler");
 navToggler.addEventListener("click", () =>{
     // console.log("hi");
     hideSection();
+    toggleNavbar();
+    // document.body.classList.toggle("hide-scrolling");
 });
 
 function hideSection(){
     document.querySelector("section.active").classList.toggle("fade-out");
 }
+function toggleNavbar(){
+    document.querySelector(".header").classList.toggle("active");
+}
+
+
+// ACTIVE SECTION
+document.addEventListener("click", (e) =>{
+    if(e.target.classList.contains("link-item") && e.target.hash !== ""){
+        //activate the overlay to prevent multiple clicks
+        document.querySelector(".overlay").classList.add("active");
+        // console.log(hash);
+        if(e.target.classList.contains("nav-item")){
+            // console.log("true");
+            toggleNavbar();
+        }
+        else{
+            console.log("false");
+        }
+        setTimeout(() =>{
+            document.querySelector("section.active").classList.remove("active", "fade-out");
+            document.querySelector(e.target.hash).classList.add("active");
+            document.querySelector(".overlay").classList.remove("active");
+        },500);
+    }
+});
 
 // ABOUT TABS
 const tabsContainer = document.querySelector(".about-tabs"),

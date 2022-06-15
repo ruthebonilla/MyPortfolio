@@ -15,6 +15,22 @@
     </title>
 </head>
 <body>
+
+
+    <!-- BACKGROUND CIRCLES STARTS -->
+    <div class="bg-circles">
+        <span class="circle1"></span>
+        <span class="circle2"></span>
+        <span class="circle3"></span>
+        <span class="circle4"></span>
+    </div>
+    <!-- BACKGROUND CIRCLES ENDS -->
+
+    <!-- OVERLAY STARTS -->
+    <div class="overlay">
+    </div>
+    <!-- OVERLAY ENDS -->
+
     <!-- MAIN STARTS -->
     <div class="main">
 
@@ -28,10 +44,10 @@
                     <nav class="nav">
                         <div class="nav-inner">
                             <ul>
-                                <li><a href="#" class="nav-item">Home</a></li>
-                                <li><a href="#" class="nav-item">About</a></li>
-                                <li><a href="#" class="nav-item">Portfolio</a></li>
-                                <li><a href="#" class="nav-item">Contact</a></li>
+                                <li><a href="#home" class="nav-item link-item">Home</a></li>
+                                <li><a href="#about" class="nav-item link-item">About</a></li>
+                                <li><a href="#portfolio" class="nav-item link-item">Portfolio</a></li>
+                                <li><a href="#contact" class="nav-item link-item">Contact</a></li>
 
                             </ul>
                         </div>
@@ -42,15 +58,15 @@
         <!-- HEADER ENDS -->
         
         <!-- HOME SECTION STARTS -->
-        <section class="home-section align-items-center active">
+        <section class="home-section align-items-center active" id="home">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="home-text">
                         <p>Hello World, I'm</p>
                         <h1>Ruth Bonilla</h1>
-                        <h3 class="mb-4">Full Stack Developer</h3>
-                        <a href="#" class="button">more about me</a>
-                        <a href="#" class="button">portfolio</a>
+                        <h3 class="mb-4">A Full Stack Developer</h3>
+                        <a href="#about" class="button link-item">more about me</a>
+                        <a href="#portfolio" class="button link-item">portfolio</a>
                     </div>
                     <div class="home-img">
                         <div class="img-box">
@@ -64,7 +80,7 @@
 
 
         <!-- ABOUT SECTION STARTS -->
-        <section class="about-section">
+        <section class="about-section" id="about">
             <div class="container">
                 <div class="row">
                     <div class="section-title">
@@ -143,8 +159,8 @@
                         </div>
                         <!-- EXPERIENCE ENDS -->
 
-                        <a href="#" class="button mb-5">Download CV</a>
-                        <a href="#" class="button mb-5">Contact Me</a>
+                        <a href="#cv.pdf" target="_blank" class="button mb-5">Download CV</a>
+                        <a href="#contact" class="button mb-5 link-item">Contact Me</a>
 
                     </div>
                 </div>
@@ -154,7 +170,7 @@
 
 
         <!-- PORTFOLIO SECTION STARTS -->
-        <section class="portfolio-section">
+        <section class="portfolio-section" id="portfolio">
             <div class="container">
                 <div class="row">
                     <div class="section-title">
@@ -286,7 +302,7 @@
 
 
         <!-- CONTACT SECTION STARTS -->
-        <section class="contact-section">
+        <section class="contact-section" id="contact">
             <div class="container">
                 <div class="row">
                     <div class="section-title">
